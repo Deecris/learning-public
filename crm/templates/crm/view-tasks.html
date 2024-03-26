@@ -1,0 +1,39 @@
+{% extends 'crm/base.html' %}
+
+<html>
+  {% block content %}
+
+  <h3>Task</h3>
+
+  <hr />
+
+  {% for task in AllTasks %}
+
+  <br />
+
+  {{task.id}}
+
+  <br />
+
+  {{task.title}}
+
+  <br />
+
+  {{task.description}}
+
+  <br />
+
+  {{task.created}}
+
+  <br />
+
+  <a href="{% url 'update-task' task.id %}"> Update task</a>
+
+  &nbsp:
+
+  <a href="{% url 'delete-task' task.id %}"> Delete task</a>
+
+  <br />
+
+  {% endfor %} {% endblock %}
+</html>

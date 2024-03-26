@@ -1,0 +1,18 @@
+{% extends 'crm/base.html' %}
+
+<html>
+  {% block content %}
+
+  <h3>Update your tasks here</h3>
+
+  <p>Task form</p>
+
+  <hr />
+
+  <form method="POST" autocomplete="off" enctype="multipart/form-data">
+    {% csrf_token %} {{UpdateTask.as_p}}
+
+    <input type="submit" value="update task" />
+  </form>
+  {% endblock %}
+</html>

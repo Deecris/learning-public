@@ -1,0 +1,39 @@
+{% load static %}
+
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css' %}"
+    />
+  </head>
+
+  <h1>website under development</h1>
+
+  <hr />
+
+  <a href="{% url '' %}"> Home </a>
+
+  &nbsp;
+
+  <a href="{% url 'create-task' %}"> Create Task </a>
+
+  &nbsp;
+
+  <a href="{% url 'view-tasks' %}"> View Tasks </a>
+
+  &nbsp;
+
+  <a href="{% url 'register' %}"> Register </a>
+
+  &nbsp;
+
+  <a href="{% url 'my-login' %}"> Login </a>
+
+  <hr />
+
+  {% block content %} {% endblock %}
+
+  <script src="{% static 'js/app.js' %}"></script>
+</html>

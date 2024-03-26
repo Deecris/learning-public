@@ -1,0 +1,18 @@
+{% extends 'crm/base.html' %}
+
+<html>
+  {% block content %}
+
+  <h3>Register now!</h3>
+
+  <p>Create your account here</p>
+
+  <hr />
+
+  <form method="POST" autocomplete="off">
+    {% csrf_token %} {{ RegistrationForm.as_p}}
+    <input type="submit" value="Create account" />
+  </form>
+
+  {% endblock %}
+</html>
